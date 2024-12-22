@@ -1,0 +1,173 @@
+/* Layout styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('{{ url_for("static", filename="access.jpg") }}');
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 20px; /* Add padding to prevent image cut off on smaller screens */
+    box-sizing: border-box;
+}
+
+/* Card container for login form */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight transparency for readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Flash message styles */
+.flash-messages {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+}
+
+.flash-message {
+    margin: 0;
+}
+
+/* Form styles */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-field {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    background-color: #fafafa;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field::placeholder {
+    color: #888;
+}
+
+.input-field:focus {
+    border-color: #0095f6;
+}
+
+/* Submit button style */
+.login-button {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #0095f6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: #007bb5;
+    transform: translateY(-2px); /* Subtle hover effect */
+}
+
+.login-button:active {
+    transform: translateY(0); /* Active state for button */
+}
+
+/* Social media button styles */
+.social {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-btn {
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.social-btn.google {
+    background-color: #db4437;
+}
+
+.social-btn.facebook {
+    background-color: #3b5998;
+}
+
+.social-btn i {
+    margin-right: 8px;
+}
+
+.social-btn:hover {
+    opacity: 0.8;
+}
+
+/* Footer and signup link */
+.footer {
+    margin-top: 15px;
+}
+
+.signup-link {
+    color: #0095f6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .login-card {
+        padding: 25px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .input-field {
+        font-size: 14px;
+    }
+
+    .login-button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
